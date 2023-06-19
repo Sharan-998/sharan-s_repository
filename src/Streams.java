@@ -9,8 +9,7 @@ public class Streams {
         vowels(arr);
         sortStrings(arr);
 
-        int[] nums = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-        numbers(nums);
+
     }
 
     private static void sortStrings(String[] arr) {
@@ -25,14 +24,6 @@ public class Streams {
         Arrays.stream(arr).forEach(System.out::println);
     }
 
-    private static void numbers(int[] nums) {
-        double result = Arrays.stream(nums)
-                .filter(n -> n % 2 != 0)
-                .mapToDouble(n -> Math.pow(n, 2))
-                .average().orElse(0);
-
-        System.out.println(result);
-    }
 
     public static void capitalAndSorted(String[] arr) {
         Arrays.stream(arr).map(x ->
